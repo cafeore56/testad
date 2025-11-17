@@ -17,18 +17,6 @@ func _on_admob_initialization_completed(status_data) -> void:
 	if is_initialize:
 		print("初期化が完了したよ")
 
-func _load_ads() -> void:
-	admob.load_app_open_ad()
-
-	# For cold start/loading screen:
-	if admob.is_app_open_ad_available():
-		admob.show_app_open_ad()
-
-	admob.load_banner_ad()
-	admob.load_interstitial_ad()
-	admob.load_rewarded_ad()
-	admob.load_rewarded_interstitial_ad()
-
 
 func _on_bana_pressed() -> void:
 	if is_initialize:
