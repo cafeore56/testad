@@ -11,8 +11,7 @@ script = ExtResource("2_epypp")
 banner_position = 1
 android_debug_application_id = "ca-app-pub-3940256099942544~3347511713"
 android_real_application_id = "ca-app-pub-1211614807392131~1107876184"
-android_debug_banner_id = "ca-app-pub-3940256099942544/92145897413617"
-android_debug_rewarded_interstitial_id = "ca-app-pub-3940256099942544/53540463799"
+android_debug_banner_id = "ca-app-pub-3940256099942544/9214589741"
 metadata/_custom_type_script = "uid://llqpvsvyb2if"
 
 [node name="Label" type="Label" parent="."]
@@ -21,3 +20,30 @@ offset_top = 200.0
 offset_right = 303.0
 offset_bottom = 223.0
 text = "広告テスト"
+
+[node name="Bana" type="Button" parent="."]
+offset_left = 105.0
+offset_top = 302.0
+offset_right = 153.0
+offset_bottom = 333.0
+text = "Bana"
+
+[node name="Ini" type="Button" parent="."]
+offset_left = 267.0
+offset_top = 347.0
+offset_right = 295.0
+offset_bottom = 378.0
+text = "Ini"
+
+[node name="Rew" type="Button" parent="."]
+offset_left = 387.0
+offset_top = 295.0
+offset_right = 428.0
+offset_bottom = 326.0
+text = "Rew"
+
+[connection signal="initialization_completed" from="Admob" to="." method="_on_admob_initialization_completed"]
+[connection signal="rewarded_ad_user_earned_reward" from="Admob" to="." method="_on_admob_rewarded_ad_user_earned_reward"]
+[connection signal="pressed" from="Bana" to="." method="_on_bana_pressed"]
+[connection signal="pressed" from="Ini" to="." method="_on_ini_pressed"]
+[connection signal="pressed" from="Rew" to="." method="_on_rew_pressed"]
