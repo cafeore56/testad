@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://piw4ejq6buju"]
+
+[ext_resource type="Script" uid="uid://mtwpguhnleb7" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://llqpvsvyb2if" path="res://addons/AdmobPlugin/Admob.gd" id="2_epypp"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0e48y")
+
+[node name="Admob" type="Node" parent="."]
+script = ExtResource("2_epypp")
+banner_position = 1
+android_debug_application_id = "ca-app-pub-3940256099942544~3347511713"
+android_real_application_id = "ca-app-pub-1211614807392131~1107876184"
+android_debug_banner_id = "ca-app-pub-3940256099942544/92145897413617"
+android_debug_rewarded_interstitial_id = "ca-app-pub-3940256099942544/53540463799"
+metadata/_custom_type_script = "uid://llqpvsvyb2if"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 234.0
+offset_top = 200.0
+offset_right = 303.0
+offset_bottom = 223.0
+text = "広告テスト"
